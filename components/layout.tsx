@@ -12,7 +12,7 @@ interface LayoutProps {
 
 function Layout({ metadata, children }: LayoutProps) {
   return (
-    <div>
+    <div >
       <Nav />
       {children}
     </div>

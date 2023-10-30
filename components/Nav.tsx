@@ -2,7 +2,6 @@ import Link from 'next/link';
 import 'globals.css';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Nav: React.FC = () => {
@@ -13,7 +12,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className={`bg-army fixed w-full top-0 z-50 ${isMenuOpen ? 'h-20' : 'h-20'}`}>
+    <nav className={`bg-black fixed w-full top-0 z-50 ${isMenuOpen ? '' : 'border-b'}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="transform transition-transform duration-300 text-white ease-in-out hover:scale-110">
           Raft
@@ -21,7 +20,7 @@ const Nav: React.FC = () => {
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isMenuOpen ? (
-              <FaTimes size={24} color="white"/>
+              <FaTimes size={24} color="white" />
             ) : (
               <FaBars size={24} color="white" />
             )}
@@ -32,60 +31,46 @@ const Nav: React.FC = () => {
             <button onClick={toggleMenu} className="absolute top-4 right-4">
               <FaTimes size={24} color="white" />
             </button>
-            <li className='mt-10 text-center border-t mt-20'>
+            <li className='mt-10 text-center mt-20'>
               <Link href="/" className="text-ghostwhite text-lg hover:text-gray-300 p-3" onClick={toggleMenu}>
-                Home
+                Solutions
               </Link>
             </li>
-            <li className='mt-10 text-center border-t'>
-              <Link href="/about" className="text-ghostwhite text-lg hover:text-gray-300 p-3" onClick={toggleMenu}>
-                About Us
+            <li className='mt-10 text-center'>
+              <Link href="/learn" className="text-ghostwhite text-lg hover:text-gray-300 p-3" onClick={toggleMenu}>
+                learn
               </Link>
             </li>
-            <li className='mt-10 text-center border-t'>
-              <Link href="/services" className="text-ghostwhite text-lg hover:text-gray-300" onClick={toggleMenu}>
-                Services
-              </Link>
-            </li>
-            <li className='mt-10 text-center border-t'>
-              <Link href="/portfolio" className="text-ghostwhite text-lg hover:text-gray-300" onClick={toggleMenu}>
-                Portfolio
-              </Link>
-            </li>
-            <li className='mt-10 text-center border-t'>
-              <Link href="/contact" className="text-ghostwhite text-lg hover:text-gray-300" onClick={toggleMenu}>
-                Contact
+            <li className='mt-10 text-center'>
+              <Link href="/about" className="text-ghostwhite text-lg hover:text-gray-300" onClick={toggleMenu}>
+                About
               </Link>
             </li>
           </ul>
         ) : (
-          <ul className="hidden md:flex space-x-8 items-center md:space-x-12">
+          <div className='hidden w-3/5 md:flex justify-around'>
+            <ul className="md:flex flex md:w-3/5  md:space-x-12">
             <li>
               <Link href="/" className="text-ghostwhite text-lg hover:text-gray-300">
-                Home
+                Solutions
+              </Link>
+            </li>
+            <li>
+              <Link href="/learn" className="text-ghostwhite text-lg hover:text-gray-300">
+                Learn
               </Link>
             </li>
             <li>
               <Link href="/about" className="text-ghostwhite text-lg hover:text-gray-300">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="text-ghostwhite text-lg hover:text-gray-300">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/portfolio" className="text-ghostwhite text-lg hover:text-gray-300">
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="text-ghostwhite text-lg hover:text-gray-300">
-                Contact
+                About
               </Link>
             </li>
           </ul>
+          <div className="flex md:space-x-12">
+          <button className='text-white'>Login</button>
+           <button className='text-white rounded-full pl-4 pr-4 bg-green-900'>Get Started</button>
+          </div>
+          </div>
         )}
       </div>
     </nav>

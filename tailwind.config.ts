@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         'custom-blue': '#000B47',
-        'army': '#4B5320',
+        'black': '#000',
         'darkblue': '#151e3d',
         'lightblue': '#5c95ff',
         'ghostwhite': '#f8f8ff'
