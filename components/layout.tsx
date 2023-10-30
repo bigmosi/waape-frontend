@@ -19,7 +19,6 @@ function Layout({ metadata, children }: LayoutProps) {
   );
 }
 
-// Provide a default value for metadata
 Layout.defaultProps = {
   metadata: {
     title: 'Default Title',

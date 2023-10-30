@@ -18,7 +18,9 @@ const config: Config = {
         'black': '#000',
         'darkblue': '#151e3d',
         'lightblue': '#5c95ff',
-        'ghostwhite': '#f8f8ff'
+        'ghostwhite': '#f8f8ff',
+        'graycolor': '#a9a9a9',
+        'textcolor': '#F7EFE5'
       }
     },
   },

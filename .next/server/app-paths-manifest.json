@@ -1,1 +1,7 @@
-{}
+{
+  "/solution/page": "app/solution/page.js",
+  "/login/page": "app/login/page.js",
+  "/learn/page": "app/learn/page.js",
+  "/about/page": "app/about/page.js",
+  "/signup/page": "app/signup/page.js"
+}
