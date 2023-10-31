@@ -20,8 +20,15 @@ const config: Config = {
         'lightblue': '#5c95ff',
         'ghostwhite': '#f8f8ff',
         'graycolor': '#a9a9a9',
-        'textcolor': '#F7EFE5'
-      }
+        'textcolor': '#F7EFE5',
+        'newcolor': '#202020',
+        'greencolor': '#48d64c',
+        'textsmall': '#BDBDBD',
+        'lighgray': '#989898'
+      },
+      boxShadow: {
+        'custom-shadow': '0 4px 6px rgba(255, 0, 0, 0.5)',
+      },
     },
   },
   plugins: [],
